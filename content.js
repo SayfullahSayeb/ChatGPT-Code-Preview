@@ -45,9 +45,6 @@ function togglePreview(code) {
   const topControlsDiv = document.createElement('div');
   topControlsDiv.className = 'preview-controls top';
 
-  const bottomControlsDiv = document.createElement('div');
-  bottomControlsDiv.className = 'preview-controls bottom';
-
   const closeBtn = createButton(`
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
       <path d="M0 0h24v24H0z" fill="none"/>
@@ -61,7 +58,7 @@ function togglePreview(code) {
   const copyBtn = createButton('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>', () => copyCode(code), 'copy-btn');
   copyBtn.title = 'Copy';
 
-  const downloadBtn = createButton('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M5 20h14v-2H5v2zm7-18L5.33 11h3.67v6h4v-6h3.67L12 2z"/></svg>', () => downloadCode(code), 'download-btn');
+  const downloadBtn = createButton('<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a1 1 0 0 1 1 1v10.586l2.293-2.293a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L11 13.586V3a1 1 0 0 1 1-1zM5 17a1 1 0 0 1 1 1v2h12v-2a1 1 0 1 1 2 0v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2a1 1 0 0 1 1-1z" /></svg>', () => downloadCode(code), 'download-btn');
   downloadBtn.title = 'Download';
 
   const reloadBtn = createButton('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.1-.22 2.14-.61 3.09l1.46 1.46C19.78 14.9 20 13.48 20 12c0-4.42-3.58-8-8-8zm-6.39 1.91L4.22 4.22C2.78 5.66 2 7.71 2 10c0 4.42 3.58 8 8 8v3l4-4-4-4v3c-3.31 0-6-2.69-6-6 0-1.1.22-2.14.61-3.09z"/></svg>', () => {
@@ -76,7 +73,7 @@ function togglePreview(code) {
 
   const titleDiv = document.createElement('div');
   titleDiv.className = 'preview-title';
-  titleDiv.innerHTML = '<a href="https://github.com/ykyritsis/" target="_blank" title="Visit GitHub"><svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a> code preview';
+  titleDiv.innerHTML = '<a href="https://github.com/SayfullahSayeb/ChatGPT-Code-Preview/" target="_blank" title="Visit GitHub"><svg width="32px" fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><path d="M12 2.247a10 10 0 0 0-3.162 19.487c.5.088.687-.212.687-.475 0-.237-.012-1.025-.012-1.862-2.513.462-3.163-.613-3.363-1.175a3.64 3.64 0 0 0-1.025-1.413c-.35-.187-.85-.65-.013-.662a2 2 0 0 1 1.538 1.025 2.137 2.137 0 0 0 2.912.825 2.1 2.1 0 0 1 .638-1.338c-2.225-.25-4.55-1.112-4.55-4.937a3.9 3.9 0 0 1 1.025-2.688 3.6 3.6 0 0 1 .1-2.65s.837-.262 2.75 1.025a9.43 9.43 0 0 1 5 0c1.912-1.3 2.75-1.025 2.75-1.025a3.6 3.6 0 0 1 .1 2.65 3.87 3.87 0 0 1 1.025 2.688c0 3.837-2.338 4.687-4.562 4.937a2.37 2.37 0 0 1 .674 1.85c0 1.338-.012 2.413-.012 2.75 0 .263.187.575.687.475A10.005 10.005 0 0 0 12 2.247"/></svg>Preview Code</a> ';
 
   const tabsDiv = document.createElement('div');
   tabsDiv.className = 'preview-tabs';
@@ -95,19 +92,18 @@ function togglePreview(code) {
     codeTab.classList.add('active');
   }, 'tab-btn');
 
-  tabsDiv.append(previewTab, codeTab);
+  tabsDiv.append(previewTab, codeTab, copyBtn, downloadBtn, reloadBtn);
 
   topControlsDiv.append(titleDiv, tabsDiv);
   const rightControls = document.createElement('div');
   rightControls.className = 'right-controls';
   rightControls.append(darkModeToggle, closeBtn);
   topControlsDiv.append(rightControls);
-  bottomControlsDiv.append(copyBtn, downloadBtn, reloadBtn);
-  previewContainer.append(topControlsDiv, previewContent, codeContent, bottomControlsDiv);
+  previewContainer.append(topControlsDiv, previewContent, codeContent);
   document.body.appendChild(previewContainer);
 
   // Resize main content
-  document.body.style.width = '60%';
+  document.body.style.width = '40%';
 
   updatePreview(code);
   makeResizable(previewContainer);
@@ -240,7 +236,3 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 // Periodically check for new code blocks (as a fallback)
 setInterval(addButtonsToExistingCodeBlocks, 2000);
-
-
-
-
