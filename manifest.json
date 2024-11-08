@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
     "name": "ChatGPT Code Preview",
-    "version": "1.3",
-    "description": "Preview, copy, and download code from ChatGPT with CSP Unblock for chatgpt.com",
+    "version": "1.0.0",
+    "description": "Preview, copy, and download code from ChatGPT",
     "permissions": ["activeTab", "webRequest", "webRequestBlocking"],
     "host_permissions": [
         "https://chatgpt.com/*"
@@ -13,7 +13,6 @@
     "content_scripts": [
         {
             "matches": [
-                "https://chat.openai.com/*",
                 "https://chatgpt.com/*"
             ],
             "js": ["content.js"],
