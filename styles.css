@@ -1,5 +1,6 @@
 .code-buttons {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   margin-top: 10px;
 }
@@ -30,7 +31,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 40%;
+  width: 60%;
   height: 100%;
   background: linear-gradient(to right, #f0f0f0, #ffffff);
   border-left: 1px solid #ccc;
@@ -56,16 +57,12 @@
   display: flex;
   gap: 10px;
   padding: 10px;
-  background-color: #f0f0f0;
+  background-color: #000000;
 }
 
 .preview-controls.top {
   justify-content: space-between;
   align-items: center;
-}
-
-.preview-controls.bottom {
-  justify-content: flex-start;
 }
 
 .right-controls {
@@ -174,7 +171,7 @@ button:hover {
   align-items: center;
   gap: 10px;
   font-weight: bold;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .preview-title a {
@@ -190,7 +187,8 @@ button:hover {
 .resizer {
   width: 5px;
   height: 100%;
-  background: #ccc;
+  border-radius: 25px;
+  background: #000000;
   position: absolute;
   left: 0;
   top: 0;
@@ -221,6 +219,7 @@ body {
 
 .copy-btn::after, .download-btn::after {
   content: 'Copied!';
+  font-size: 24px;
   position: absolute;
   top: 0;
   left: 0;
@@ -229,7 +228,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #4CAF50;
+  background-color: #000000;
   transform: translateY(100%);
   transition: transform 0.3s ease;
 }
