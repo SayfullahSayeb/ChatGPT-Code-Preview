@@ -16,10 +16,13 @@ The ChatGPT Code Preview Extension is a browser extension designed to enhance th
 
 ## Installation
 
-1. Download the extension files (manifest.json, content.js, and styles.css).
-2. Open your Chrome browser and navigate to `chrome://extensions/`.
-3. Enable "Developer mode" in the top right corner.
-4. Click "Load unpacked" and select the folder containing the extension files.
+1. Download the latest release from the GitHub release page.
+2. Extract the files to a folder.
+3. For Chrome go to `chrome://extensions/` in your browser. 
+   For Edge go to `edge://extensions/` in your browser. 
+4. Enable Developer mode (top right).
+5. Click Load unpacked and select the extracted folder.
+6. Activate the extension.
 
 ## Usage
 
