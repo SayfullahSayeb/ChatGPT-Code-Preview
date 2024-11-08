@@ -23,7 +23,7 @@ The ChatGPT Code Preview Extension is a browser extension designed to enhance th
 
 ## Usage
 
-1. Visit ChatGPT (https://chat.openai.com/).
+1. Visit ChatGPT (https://chatgpt.com/).
 2. When you see a code snippet, a "Preview" button will appear next to it.
 3. Click the "Preview" button to open the preview panel.
 4. Use the "Preview" and "Code" tabs to switch between the output and the source code.
