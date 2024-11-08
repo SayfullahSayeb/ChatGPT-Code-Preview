@@ -29,27 +29,6 @@ The ChatGPT Code Preview Extension is a browser extension designed to enhance th
 4. Use the "Preview" and "Code" tabs to switch between the output and the source code.
 5. Use the "Copy Code" and "Download Code" buttons as needed.
 
-## Using CSP Unblock Extension
-
-To fully utilize the ChatGPT Code Preview Extension, you may need to use the CSP Unblock extension to bypass Content Security Policy restrictions. Here's how to set it up:
-
-1. Install the CSP Unblock extension from the Chrome Web Store:
-   [CSP Unblock](https://chromewebstore.google.com/detail/csp-unblock/lkbelpgpclajeekijigjffllhigbhobd)
-
-2. Once installed, click on the extension icon in your browser toolbar to activate it for chat.openai.com.
-
-3. The CSP Unblock extension will remove the following CSP-related response headers:
-   - "content-security-policy"
-   - "content-security-policy-report-only"
-   - "x-webkit-csp"
-   - "x-content-security-policy"
-
-4. With CSP restrictions removed, the ChatGPT Code Preview Extension should now work without any limitations, allowing you to run scripts and load resources that would otherwise be blocked.
-
-## Important Security Note
-
-Remember to disable the CSP Unblock extension when you're not using ChatGPT or testing your extension. Removing CSP can significantly reduce a website's protection against certain types of attacks, so it should only be used when necessary and on trusted sites.
-
 ## Contribution
 
 Feel free to contribute to this project by submitting pull requests or reporting issues on the project's GitHub repository.
